@@ -1,0 +1,289 @@
+<!doctype html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://sharehiddifynext.github.io/news/article-103418.htm" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>深入浅出：v2ray实时网速分析与优化策略</title>
+        <meta name="description" content="在如今的互联网时代，越来越多的用户选择使用 V2Ray 来突破网络封锁，确保安全、稳定的上网体验。无论是因为审查、地理限制还是加密需求，V2Ray都成为了许多技术爱好者和普通用户的首选。然而，使用V2" />
+        <link rel="icon" href="/assets/website/img/clashmetagithub/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="分享HiddifyNext节点订阅中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://sharehiddifynext.github.io/news/article-103418.htm" />
+    <meta property="og:site_name" content="分享HiddifyNext节点订阅中文网" />
+    <meta property="og:title" content="深入浅出：v2ray实时网速分析与优化策略" />
+    <meta property="og:image" content="https://sharehiddifynext.github.io/uploads/20240815-1/a42abe912f6a5552212146d5f98525bb.webp" />
+        <meta property="og:release_date" content="2025-04-24T09:18:20" />
+    <meta property="og:updated_time" content="2025-04-24T09:18:20" />
+        <meta property="og:description" content="在如今的互联网时代，越来越多的用户选择使用 V2Ray 来突破网络封锁，确保安全、稳定的上网体验。无论是因为审查、地理限制还是加密需求，V2Ray都成为了许多技术爱好者和普通用户的首选。然而，使用V2" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="深入浅出：v2ray实时网速分析与优化策略">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/website/css/clashmetagithub/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/clashmetagithub/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/website/css/clashmetagithub/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/website/css/clashmetagithub/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="/assets/website/fonts/clashmetagithub/icomoon/style.css">
+    <link rel="stylesheet" href="/assets/website/fonts/clashmetagithub/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="/assets/website/css/clashmetagithub/aos.css">
+    <link rel="stylesheet" href="/assets/website/css/clashmetagithub/style.css">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D7WYL5QYQ1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D7WYL5QYQ1');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="100" data-page="detail">
+        <div class="lines-wrap">
+        <div class="lines-inner">
+            <div class="lines"></div>
+        </div>
+    </div>
+    <!-- END lines -->
+    <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close">
+                <span class="icofont-close js-menu-toggle"></span>
+            </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+    </div>
+    <nav class="site-nav dark js-site-navbar mb-5 site-navbar-target">
+        <div class="container">
+            <div class="site-navigation">
+                                <a href="/" class="logo m-0 float-left">分享HiddifyNext</span></a>
+                
+                <ul class="js-clone-nav d-none d-lg-inline-block site-menu float-left">
+                                        <li><a href="/" class="nav-link">首页</a></li>
+                                        <li><a href="/paid-subscribe/" class="nav-link">推荐机场</a></li>
+                                        <li><a href="/news/" class="nav-link">新闻资讯</a></li>
+                                        <li><a href="/client.htm" class="nav-link">客户端</a></li>
+                                    </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="untree_co-hero" id="home-section">
+        <div class="container">
+            <div class="row align-items-center" style="height: 380px;overflow: hidden;padding-top: 0;">
+                <div class="col-12">
+                    <div class="dots"></div>
+                    <div class="row align-items-center">
+                        <div class="col-lg-7 ml-auto order-lg-2" data-aos="fade-right" data-aos-delay="400">
+                            <img src="/assets/website/img/clashmetagithub/market-launch-pana.svg" alt="Image" class="img-fluid">
+                        </div> <!-- /.col-lg-6 -->
+                        <div class="col-lg-5">
+                            <h1 class="heading" data-aos="fade-up" data-aos-delay="0">深入浅出：v2ray实时网速分析与优化策略</h1>
+                            <div class="excerpt" data-aos="fade-up" data-aos-delay="100">
+                                <p>
+                                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / <span>正文</span>
+                                </p>
+                            </div> <!-- /.excerpt -->
+                        </div> <!-- /.col-lg-5 -->
+                    </div>
+                </div>
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->
+    </div> <!-- /.untree_co-hero -->
+    <div class="untree_co-section" id="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                    
+<p data-start="25" data-end="248" class="">在如今的互联网时代，越来越多的用户选择使用 V2Ray 来突破网络封锁，确保安全、稳定的上网体验。无论是因为审查、地理限制还是加密需求，V2Ray都成为了许多技术爱好者和普通用户的首选。然而，使用V2Ray进行科学上网时，网速的表现是最为关键的因素之一，直接影响到用户的在线体验。从浏览网页、观看视频，到进行在线游戏、进行数据传输等，网络速度的好坏都至关重要。因此，了解如何评估、优化和提升V2Ray的实时网速，成为每位V2Ray用户必备的技能。</p>
+<p data-start="250" data-end="313" class="">本文将深入分析V2Ray的实时网速，探讨影响V2Ray网速的主要因素，并提供实用的优化策略，帮助用户提升V2Ray的上网体验。</p>
+<hr data-start="315" data-end="318" class="" style="">
+<h2 data-start="320" data-end="334" class="">一、什么是V2Ray？</h2>
+<p data-start="336" data-end="409" class="">V2Ray是一个功能强大的代理工具，旨在帮助用户绕过互联网封锁，实现自由、安全的网络访问。它提供了高效的协议支持、强大的安全加密和灵活的配置选项。</p>
+<h3 data-start="411" data-end="429" class="">1.1 V2Ray的核心特点</h3>
+<ul data-start="431" data-end="613">
+<li data-start="431" data-end="503" class="" style="">
+<p data-start="433" data-end="503" class=""><strong data-start="433" data-end="442">多协议支持</strong>：V2Ray支持多个代理协议，包括VMess、VLess等，这些协议使得它在高压网络环境下依然能保持较高的稳定性和灵活性。</p>
+</li>
+<li data-start="504" data-end="565" class="" style="">
+<p data-start="506" data-end="565" class=""><strong data-start="506" data-end="515">灵活的配置</strong>：V2Ray具有高度的可定制性，用户可以根据自身的网络环境和需求，调节各种参数，从而获得最佳的性能。</p>
+</li>
+<li data-start="566" data-end="613" class="" style="">
+<p data-start="568" data-end="613" class=""><strong data-start="568" data-end="576">高安全性</strong>：V2Ray采用加密协议来保障用户的隐私安全，避免数据泄露，防止网络监控。</p>
+</li>
+</ul>
+<p data-start="615" data-end="665" class="">因此，V2Ray不仅仅是一个代理工具，它还通过强大的功能组合，成为了许多用户科学上网的首选解决方案。</p>
+<hr data-start="667" data-end="670" class="" style="">
+<h2 data-start="672" data-end="689" class="">二、V2Ray的实时网速概述</h2>
+<p data-start="691" data-end="739" class="">在使用V2Ray时，<strong data-start="701" data-end="709">实时网速</strong>是影响使用体验的关键指标之一。实时网速通常涉及以下几个方面：</p>
+<ol data-start="741" data-end="914">
+<li data-start="741" data-end="794" class="" style="">
+<p data-start="744" data-end="794" class=""><strong data-start="744" data-end="752">下载速度</strong>：通常指用户从服务器获取数据的速度，影响页面加载、视频播放、文件下载等操作的流畅度。</p>
+</li>
+<li data-start="795" data-end="846" class="" style="">
+<p data-start="798" data-end="846" class=""><strong data-start="798" data-end="806">上传速度</strong>：指数据从用户设备上传到服务器的速度，这对在线视频、实时语音通话等活动尤为重要。</p>
+</li>
+<li data-start="847" data-end="914" class="" style="">
+<p data-start="850" data-end="914" class=""><strong data-start="850" data-end="856">延迟</strong>：也称为“Ping”，指从客户端发出请求到服务器响应的时间。低延迟对于高效的网络通信至关重要，尤其是进行实时游戏时。</p>
+</li>
+</ol>
+<p data-start="916" data-end="949" class="">通过实时监控网速，用户能够实时调整V2Ray的配置，提高网速表现。</p>
+<hr data-start="951" data-end="954" class="" style="">
+<h2 data-start="956" data-end="975" class="">三、影响V2Ray实时网速的因素</h2>
+<p data-start="977" data-end="1012" class="">V2Ray的实时网速受多种因素的影响。了解这些因素是优化网速的第一步。</p>
+<h3 data-start="1014" data-end="1027" class="">3.1 服务器位置</h3>
+<p data-start="1029" data-end="1135" class="">V2Ray的服务器位置对网速的影响非常大。选择离自己物理位置较近的服务器可以有效降低网络延迟，提高下载和上传速度。如果服务器距离用户很远，网络请求就需要经过更多的中转路由，增加了数据传输的时间，从而影响整体网速。</p>
+<h3 data-start="1137" data-end="1149" class="">3.2 网络带宽</h3>
+<p data-start="1151" data-end="1252" class="">网络带宽是影响网速的直接因素。VPS提供商通常会为用户提供不同带宽规格的服务器，带宽越大，理论上能提供更高的网速。在高带宽的网络环境下，V2Ray能够更快地处理大流量的数据请求，提供更加流畅的上网体验。</p>
+<h3 data-start="1254" data-end="1266" class="">3.3 协议选择</h3>
+<p data-start="1268" data-end="1384" class="">V2Ray支持多种协议，包括VMess、VLess、Shadowsocks等。不同的协议在性能上的表现有所不同。例如，VLess协议相较于VMess在速度和抗封锁性上有更好的表现。因此，选择合适的协议是优化V2Ray网速的关键之一。</p>
+<h3 data-start="1386" data-end="1398" class="">3.4 网络拥堵</h3>
+<p data-start="1400" data-end="1506" class="">V2Ray的速度可能会因为网络拥堵而受到影响。特别是在高峰时段，网络流量大，可能导致服务器无法快速响应用户请求，进而影响网速。此外，部分VPS服务商也可能出现带宽限制或网络质量不稳定的情况，这都可能导致速度下降。</p>
+<hr data-start="1508" data-end="1511" class="" style="">
+<h2 data-start="1513" data-end="1533" class="">四、如何测试V2Ray的实时网速？</h2>
+<p data-start="1535" data-end="1588" class="">在评估V2Ray的实时网速时，使用合适的工具和方法是至关重要的。以下是几种常见的测试V2Ray网速的方法：</p>
+<h3 data-start="1590" data-end="1604" class="">4.1 在线测速工具</h3>
+<p data-start="1606" data-end="1698" class="">使用像<strong data-start="1609" data-end="1622">Speedtest</strong>、<strong data-start="1623" data-end="1635">Fast.com</strong>等在线测速工具，能快速测试你与VPS服务器之间的延迟、上传和下载速度。测速时请确保关闭其他占用带宽的应用，以获得更准确的结果。</p>
+<h3 data-start="1700" data-end="1719" class="">4.2 V2Ray内置测速功能</h3>
+<p data-start="1721" data-end="1813" class="">部分V2Ray客户端提供了内置的测速功能，用户可以直接在客户端进行测速，而无需使用第三方工具。这种方式的优点是可以通过客户端与V2Ray服务的直接连接进行测速，反映出最真实的网络表现。</p>
+<h3 data-start="1815" data-end="1838" class="">4.3 使用命令行工具（如iperf）</h3>
+<p data-start="1840" data-end="1934" class="">对于技术性较强的用户，可以使用<strong data-start="1855" data-end="1864">iperf</strong>等命令行工具来测试V2Ray的网速。iperf可以提供更多参数的测试，如TCP/UDP流量、延迟、吞吐量等，更加详细地分析V2Ray的性能。</p>
+<hr data-start="1936" data-end="1939" class="" style="">
+<h2 data-start="1941" data-end="1960" class="">五、优化V2Ray实时网速的策略</h2>
+<p data-start="1962" data-end="2008" class="">如果你发现V2Ray的实时网速较慢，或者测试结果不理想，下面这些优化策略可以帮助你提高网速。</p>
+<h3 data-start="2010" data-end="2026" class="">5.1 服务器选择与测试</h3>
+<p data-start="2028" data-end="2143" class="">定期测试不同服务器的速度是优化V2Ray网速的一个有效方法。你可以尝试选择一些距离较近的VPS节点，或者选择具有高带宽、高性能的VPS服务商。同时，也可以通过V2Ray的“负载均衡”功能，将流量分配到多个服务器节点，提升整体性能。</p>
+<h3 data-start="2145" data-end="2163" class="">5.2 更新V2Ray客户端</h3>
+<p data-start="2165" data-end="2256" class="">V2Ray在不断更新，新版本往往包含了性能优化和Bug修复。如果你使用的V2Ray版本较老，可能存在一些性能瓶颈或漏洞。因此，定期检查并更新V2Ray客户端是保证最佳网速的重要措施。</p>
+<h3 data-start="2258" data-end="2272" class="">5.3 优化配置参数</h3>
+<p data-start="2274" data-end="2381" class="">V2Ray允许用户根据具体网络环境调整配置参数，如<strong data-start="2299" data-end="2314">MTU（最大传输单元）</strong>、<strong data-start="2315" data-end="2323">超时时间</strong>等。适当调整这些参数，有助于改善连接稳定性和减少延迟。例如，降低MTU值可以解决一些因网络不稳定导致的数据丢包问题。</p>
+<h3 data-start="2383" data-end="2398" class="">5.4 选择高质量节点</h3>
+<p data-start="2400" data-end="2483" class="">节点质量对V2Ray的实时网速影响非常大。选择稳定的、高质量的节点是保障良好网速的前提。你可以通过使用第三方服务提供的高质量节点，避免因不稳定的节点而造成卡顿和掉线。</p>
+<hr data-start="2485" data-end="2488" class="" style="">
+<h2 data-start="2490" data-end="2501" class="">六、常见问题解答</h2>
+<h3 data-start="2503" data-end="2525" class="">Q1：V2Ray的实时网速慢怎么办？</h3>
+<p data-start="2527" data-end="2614" class="">如果V2Ray的实时网速较慢，首先可以考虑更换服务器、检查本地网络是否出现拥堵、以及调整V2Ray的配置参数。另外，更新到最新版本的V2Ray客户端也能帮助解决一些性能问题。</p>
+<h3 data-start="2616" data-end="2639" class="">Q2：如何提高V2Ray的连接稳定性？</h3>
+<p data-start="2641" data-end="2715" class="">提高连接稳定性可以从以下几个方面入手：选择稳定的VPS服务器、定期更换节点、启用负载均衡等。此外，减少网络拥堵、优化配置也是保持稳定连接的重要手段。</p>
+<h3 data-start="2717" data-end="2739" class="">Q3：V2Ray是否支持多用户使用？</h3>
+<p data-start="2741" data-end="2801" class="">是的，V2Ray支持多用户使用。通过配置多个UUID或设置不同的端口，可以允许多个用户同时使用同一个VPS进行科学上网。</p>
+<h3 data-start="2803" data-end="2828" class="">Q4：测试V2Ray实时网速的工具有哪些？</h3>
+<p data-start="2830" data-end="2926" class="">常见的测速工具包括Speedtest、Fast.com、iperf等。Speedtest适合基本测速需求，Fast.com简洁直接，而iperf则适用于技术用户，能够进行更详细的网络性能测试。</p>
+<hr data-start="2928" data-end="2931" class="">
+<h2 data-start="2933" data-end="2943" class="">七、总结与点评</h2>
+<p data-start="2945" data-end="3062" class="">通过本文的深入分析，相信你对V2Ray的实时网速有了更全面的理解。在科学上网过程中，优化网速和稳定性是提升用户体验的关键。选择合适的服务器、优化配置、使用稳定的节点以及保持V2Ray客户端的更新，都是保障高效、稳定上网体验的重要措施。</p>
+<blockquote data-start="3064" data-end="3188" data-is-last-node="" data-is-only-node="">
+<p data-start="3066" data-end="3188" class="">正如一句话所说：“科技的进步是为了让生活变得更简单、更高效。”V2Ray正是通过其灵活的协议和强大的功能，帮助用户突破网络封锁，享受更自由的网络空间。而通过不断优化和调整，我们也能确保这一工具发挥出最大的性能优势，最终实现无缝、畅快的网络体验。</p>
+</blockquote>                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-102590.htm">2017年Shadowrocket配置详解：从下载到设置的全面指南</a></p>
+                                        <p>下一个：<a href="/news/article-103419.htm">Clash是否属于音频工具？探讨Clash与音频领域的深度关联</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-92910.htm" title="深入分析Shadowrocket的美国节点使用：畅享高效、安全的网络体验">深入分析Shadowrocket的美国节点使用：畅享高效、安全的网络体验</a></li>
+                        <li class="py-2"><a href="/news/article-91160.htm" title="局域网环境下Shadowsocks科学上网终极指南：从配置到优化">局域网环境下Shadowsocks科学上网终极指南：从配置到优化</a></li>
+                        <li class="py-2"><a href="/news/article-103419.htm" title="Clash是否属于音频工具？探讨Clash与音频领域的深度关联">Clash是否属于音频工具？探讨Clash与音频领域的深度关联</a></li>
+                        <li class="py-2"><a href="/news/article-88459.htm" title="小明的科学上网指南：高效、安全的网络自由之路">小明的科学上网指南：高效、安全的网络自由之路</a></li>
+                        <li class="py-2"><a href="/news/article-90707.htm" title="深入解析：如何解决Clash配置导致的手机重启问题">深入解析：如何解决Clash配置导致的手机重启问题</a></li>
+                        <li class="py-2"><a href="/news/article-102587.htm" title="华硕68U路由器科学上网设置全面指南">华硕68U路由器科学上网设置全面指南</a></li>
+                        <li class="py-2"><a href="/news/article-104094.htm" title="虚拟机中的V2Ray实战指南：安全翻墙与隐私守护的完美结合">虚拟机中的V2Ray实战指南：安全翻墙与隐私守护的完美结合</a></li>
+                        <li class="py-2"><a href="/news/article-92909.htm" title="使用 Shadowsocks 实现科学上网：详细教程与配置指南">使用 Shadowsocks 实现科学上网：详细教程与配置指南</a></li>
+                        <li class="py-2"><a href="/news/article-100989.htm" title="网络自由的隐与显：为何科学上网在某些地区“不可行”？">网络自由的隐与显：为何科学上网在某些地区“不可行”？</a></li>
+                        <li class="py-2"><a href="/news/article-100396.htm" title="全面教程：用小米路由器实现科学上网的终极配置指南">全面教程：用小米路由器实现科学上网的终极配置指南</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">50</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div> <!-- /.container -->
+    </div> <!-- /.untree_co-section -->
+        <div class="site-footer">
+        <div class="footer-dots"></div> <!-- /.footer-dots -->
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-12 text-center">
+                                        <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                    <p>
+                        <a href="/">分享HiddifyNext节点订阅中文网</a> 版权所有
+                        <br />
+                        Powered by WordPress
+                    </p>
+                </div>
+            </div>
+        </div> <!-- /.container -->
+    </div> <!-- /.site-footer -->
+    <div id="overlayer"></div>
+    <div class="loader">
+        <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <script src="/assets/website/js/frontend/clashmetagithub/jquery-3.5.1.min.js"></script>
+    <script src="/assets/website/js/frontend/clashmetagithub/jquery-migrate-3.0.1.min.js"></script>
+    <script src="/assets/website/js/frontend/clashmetagithub/popper.min.js"></script>
+    <script src="/assets/website/js/frontend/clashmetagithub/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashmetagithub/owl.carousel.min.js"></script>
+    <script src="/assets/website/js/frontend/clashmetagithub/jquery.easing.1.3.js"></script>
+    <script src="/assets/website/js/frontend/clashmetagithub/jquery.animateNumber.min.js"></script>
+    <script src="/assets/website/js/frontend/clashmetagithub/jquery.waypoints.min.js"></script>
+    <script src="/assets/website/js/frontend/clashmetagithub/jquery.fancybox.min.js"></script>
+    <script src="/assets/website/js/frontend/clashmetagithub/aos.js"></script>
+    <script src="/assets/website/js/frontend/clashmetagithub/custom.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
