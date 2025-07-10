@@ -1,4 +1,4 @@
-# 分享HiddifyNext | 7月4日22.9M/S|免费Clash/SSR/V2ray/Shadowrocket订阅节点  更新时间 2025-07-04 15:06:29
+# 分享HiddifyNext | 7月10日20.5M/S|免费Clash/SSR/V2ray/Shadowrocket订阅节点  更新时间 2025-07-10 09:12:54
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://sharehiddifynext.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### Clash订阅链接
 
-- https://sharehiddifynext.github.io/uploads/2025/07/0-20250704.yaml
-- https://sharehiddifynext.github.io/uploads/2025/07/1-20250704.yaml
-- https://sharehiddifynext.github.io/uploads/2025/07/2-20250704.yaml
-- https://sharehiddifynext.github.io/uploads/2025/07/3-20250704.yaml
-- https://sharehiddifynext.github.io/uploads/2025/07/4-20250704.yaml
+- https://sharehiddifynext.github.io/uploads/2025/07/0-20250710.yaml
+- https://sharehiddifynext.github.io/uploads/2025/07/1-20250710.yaml
+- https://sharehiddifynext.github.io/uploads/2025/07/2-20250710.yaml
+- https://sharehiddifynext.github.io/uploads/2025/07/3-20250710.yaml
+- https://sharehiddifynext.github.io/uploads/2025/07/4-20250710.yaml
 
 ### V2ray订阅链接
 
-- https://sharehiddifynext.github.io/uploads/2025/07/0-20250704.txt
-- https://sharehiddifynext.github.io/uploads/2025/07/1-20250704.txt
-- https://sharehiddifynext.github.io/uploads/2025/07/2-20250704.txt
-- https://sharehiddifynext.github.io/uploads/2025/07/3-20250704.txt
-- https://sharehiddifynext.github.io/uploads/2025/07/4-20250704.txt
+- https://sharehiddifynext.github.io/uploads/2025/07/0-20250710.txt
+- https://sharehiddifynext.github.io/uploads/2025/07/1-20250710.txt
+- https://sharehiddifynext.github.io/uploads/2025/07/2-20250710.txt
+- https://sharehiddifynext.github.io/uploads/2025/07/3-20250710.txt
+- https://sharehiddifynext.github.io/uploads/2025/07/4-20250710.txt
 
 ### Sing-box订阅链接
 
-- https://sharehiddifynext.github.io/uploads/2025/07/20250704.json
+- https://sharehiddifynext.github.io/uploads/2025/07/20250710.json
 
 ## 更多clash节点订阅 ：
 
