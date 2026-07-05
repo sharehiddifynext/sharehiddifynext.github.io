@@ -318,9 +318,19 @@ A：推荐使用 <code data-start="2729" data-end="2751">Autoruns for Windows</c
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekoray 的配置文件在哪里保存？</h5></div>
+    <div class="panel-heading"><h5>WinXray 的节点延迟过高怎么办？</h5></div>
     <div class="panel-body">
-        Nekoray 的配置文件默认保存在程序目录下的 `config.json` 中。用户可手动备份此文件以迁移配置，也可使用导入导出功能在不同设备间同步节点数据。<hr />    </div>
+        可通过策略组切换低延迟节点，或调整传输协议和端口。检查服务器网络和防火墙设置，确保网络通畅。必要时可启用 MUX 功能减少短连接延迟，提高整体网络体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Hysteria2 多路复用如何优化高频短连接？</h5></div>
+    <div class="panel-body">
+        多路复用允许多个短连接共享同一通道，减少握手次数和加密开销。适合游戏和即时通讯等高频短连接场景，提高吞吐量和连接稳定性，保证流量快速传输。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Potatso Lite 是否支持 Vless？</h5></div>
+    <div class="panel-body">
+        目前 Potatso Lite 仅支持 Shadowsocks 和 Vmess 协议，不支持 Vless。但开发者正在逐步扩展功能，未来可能加入更多现代代理协议支持。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Potatso Lite 支持节点手动导入和修改吗？</h5></div>
@@ -328,19 +338,19 @@ A：推荐使用 <code data-start="2729" data-end="2751">Autoruns for Windows</c
         支持。用户可以手动输入节点信息或通过扫描二维码导入节点，并进行修改或删除。虽然不支持自动订阅更新，但足以满足轻量级用户对节点管理和分流的需求。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekobox 可以定时更新订阅节点吗？</h5></div>
-    <div class="panel-body">
-        支持。用户可设置定时更新频率，例如每天或每小时，程序会自动下载订阅节点并替换旧节点，确保节点始终可用并保持最新线路信息。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>PassWall2 如何定时自动更新节点？</h5></div>
     <div class="panel-body">
         可在计划任务中添加命令 `passwall update` 并设定时间间隔，例如每日凌晨自动更新。这样可确保节点信息实时同步，避免旧节点失效影响连接体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Potatso Lite 是否支持 Vless？</h5></div>
+    <div class="panel-heading"><h5>Nekobox 可以定时更新订阅节点吗？</h5></div>
     <div class="panel-body">
-        目前 Potatso Lite 仅支持 Shadowsocks 和 Vmess 协议，不支持 Vless。但开发者正在逐步扩展功能，未来可能加入更多现代代理协议支持。<hr />    </div>
+        支持。用户可设置定时更新频率，例如每天或每小时，程序会自动下载订阅节点并替换旧节点，确保节点始终可用并保持最新线路信息。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Clash 的 Rule Provider 自动更新规则如何操作？</h5></div>
+    <div class="panel-body">
+        Rule Provider 可以通过远程 URL 自动下载规则和节点，定期更新无需手动操作。结合策略组使用，可保持节点和分流规则最新，提高访问速度和网络可用性。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>V2Ray 的流量分流如何与防火墙配合使用？</h5></div>
@@ -353,19 +363,9 @@ A：推荐使用 <code data-start="2729" data-end="2751">Autoruns for Windows</c
         PassWall2 会定期测试节点延迟和丢包率，结合策略组自动切换到最优节点。无需手动干预即可保证网页、视频和游戏流量高速稳定访问，优化整体网络体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>WinXray 的节点延迟过高怎么办？</h5></div>
+    <div class="panel-heading"><h5>Nekoray 的配置文件在哪里保存？</h5></div>
     <div class="panel-body">
-        可通过策略组切换低延迟节点，或调整传输协议和端口。检查服务器网络和防火墙设置，确保网络通畅。必要时可启用 MUX 功能减少短连接延迟，提高整体网络体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Hysteria2 多路复用如何优化高频短连接？</h5></div>
-    <div class="panel-body">
-        多路复用允许多个短连接共享同一通道，减少握手次数和加密开销。适合游戏和即时通讯等高频短连接场景，提高吞吐量和连接稳定性，保证流量快速传输。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 的 Rule Provider 自动更新规则如何操作？</h5></div>
-    <div class="panel-body">
-        Rule Provider 可以通过远程 URL 自动下载规则和节点，定期更新无需手动操作。结合策略组使用，可保持节点和分流规则最新，提高访问速度和网络可用性。    </div>
+        Nekoray 的配置文件默认保存在程序目录下的 `config.json` 中。用户可手动备份此文件以迁移配置，也可使用导入导出功能在不同设备间同步节点数据。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -395,15 +395,13 @@ A：推荐使用 <code data-start="2729" data-end="2751">Autoruns for Windows</c
     <div class="panel-body">
         <div class="row">
             <div class="text-center">
-                <a href="javascript:;" class="js_to" data-url="https://www.futizi.net/?code=" data-type="Luniuyun" data-code="svvkQf3y" target="_blank">
-                    <img src="/assets/website/img/G/luniuyun.webp" class="avatar" alt="绿牛云">
+                <a href="javascript:;" class="js_to" data-url="https://c.kilxs.cn/?path=" data-type="Xingchen" data-code="register&code" target="_blank">
+                    <img src="/assets/website/img/G/xingchen.webp" class="avatar" alt="星辰机场">
                 </a>
                 <dl>
-                    <dt><a href="javascript:;" class="js_to" data-url="https://www.futizi.net/?code=" data-type="Luniuyun" data-code="svvkQf3y" target="_blank">绿牛云</a></dt>
+                    <dt><a href="javascript:;" class="js_to" data-url="https://c.kilxs.cn/?path=" data-type="Xingchen" data-code="register&code" target="_blank">星辰机场</a></dt>
                     <dd>
-                        <p>高速稳定的网络加速</p>
-                        <p>畅享全球内容，访问 ChatGPT、TikTok、Google 等热门网站。
-全平台支持 · 7×24 专业客服 · 采用军工级安全加密传输技术。</p>                    </dd>
+                        <p>【包年送2个月】</p><p>1、购买入门版年付套餐额外送2个月，共14个月，只要99元！！！</p><p>2、购买“至尊天皇”年付套餐，额外送2个月，只要299元！！！</p><p>3、购买其他包月类套餐中的年付，同样送2个月！！！</p><p>错过要再等一年！！</p>                    </dd>
                 </dl>
             </div>
         </div>
@@ -415,16 +413,16 @@ A：推荐使用 <code data-start="2729" data-end="2751">Autoruns for Windows</c
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-6-13-today-vless-node.htm" title="分享HiddifyNext | 6月13日22.2M/S|免费Clash节点/Singbox节点/SSR节点/Shadowrocket节点/V2ray节点/Trojan节点订阅节点">分享HiddifyNext | 6月13日22.2M/S|免费Clash节点/Singbox节点/SSR节点/Shadowrocket节点/V2ray节点/Trojan节点订阅节点</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-10-node-share-links.htm" title="分享HiddifyNext | 5月10日18.3M/S|免费Singbox节点/SSR节点/V2ray节点/Clash节点/Trojan节点/Shadowrocket节点订阅节点">分享HiddifyNext | 5月10日18.3M/S|免费Singbox节点/SSR节点/V2ray节点/Clash节点/Trojan节点/Shadowrocket节点订阅节点</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-19-free-node-subscribe.htm" title="分享HiddifyNext | 5月19日21.6M/S|免费Shadowrocket节点/Clash节点/Trojan节点/Singbox节点/SSR节点/V2ray节点订阅节点">分享HiddifyNext | 5月19日21.6M/S|免费Shadowrocket节点/Clash节点/Trojan节点/Singbox节点/SSR节点/V2ray节点订阅节点</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-6-28-free-subscribe-node.htm" title="分享HiddifyNext | 6月28日22.8M/S|免费Clash节点/Shadowrocket节点/V2ray节点/SSR节点/Singbox节点/Trojan节点订阅节点">分享HiddifyNext | 6月28日22.8M/S|免费Clash节点/Shadowrocket节点/V2ray节点/SSR节点/Singbox节点/Trojan节点订阅节点</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-6-14-latest-vless-node.htm" title="分享HiddifyNext | 6月14日21.2M/S|免费Clash节点/Singbox节点/Trojan节点/Shadowrocket节点/SSR节点/V2ray节点订阅节点">分享HiddifyNext | 6月14日21.2M/S|免费Clash节点/Singbox节点/Trojan节点/Shadowrocket节点/SSR节点/V2ray节点订阅节点</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-16-free-node-subscribe.htm" title="分享HiddifyNext | 5月16日21.7M/S|免费V2ray节点/Trojan节点/SSR节点/Clash节点/Shadowrocket节点/Singbox节点订阅节点">分享HiddifyNext | 5月16日21.7M/S|免费V2ray节点/Trojan节点/SSR节点/Clash节点/Shadowrocket节点/Singbox节点订阅节点</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-17-latest-vless-node.htm" title="分享HiddifyNext | 5月17日19.4M/S|免费V2ray节点/Shadowrocket节点/Clash节点/Trojan节点/Singbox节点/SSR节点订阅节点">分享HiddifyNext | 5月17日19.4M/S|免费V2ray节点/Shadowrocket节点/Clash节点/Trojan节点/Singbox节点/SSR节点订阅节点</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-6-18-node-share.htm" title="分享HiddifyNext | 6月18日22.3M/S|免费Shadowrocket节点/Clash节点/SSR节点/Trojan节点/V2ray节点/Singbox节点订阅节点">分享HiddifyNext | 6月18日22.3M/S|免费Shadowrocket节点/Clash节点/SSR节点/Trojan节点/V2ray节点/Singbox节点订阅节点</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-9-latest-vless-node.htm" title="分享HiddifyNext | 5月9日21.9M/S|免费Trojan节点/SSR节点/Clash节点/Singbox节点/Shadowrocket节点/V2ray节点订阅节点">分享HiddifyNext | 5月9日21.9M/S|免费Trojan节点/SSR节点/Clash节点/Singbox节点/Shadowrocket节点/V2ray节点订阅节点</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-6-16-vless-node-share.htm" title="分享HiddifyNext | 6月16日18.8M/S|免费Trojan节点/Singbox节点/Clash节点/V2ray节点/Shadowrocket节点/SSR节点订阅节点">分享HiddifyNext | 6月16日18.8M/S|免费Trojan节点/Singbox节点/Clash节点/V2ray节点/Shadowrocket节点/SSR节点订阅节点</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-8-vless-windows.htm" title="分享HiddifyNext | 5月8日20.3M/S|免费SSR节点/Singbox节点/Clash节点/Trojan节点/Shadowrocket节点/V2ray节点订阅节点">分享HiddifyNext | 5月8日20.3M/S|免费SSR节点/Singbox节点/Clash节点/Trojan节点/Shadowrocket节点/V2ray节点订阅节点</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-6-20-node-share.htm" title="分享HiddifyNext | 6月20日22.1M/S|免费SSR节点/Clash节点/Shadowrocket节点/V2ray节点/Trojan节点/Singbox节点订阅节点">分享HiddifyNext | 6月20日22.1M/S|免费SSR节点/Clash节点/Shadowrocket节点/V2ray节点/Trojan节点/Singbox节点订阅节点</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-6-17-free-vless-node.htm" title="分享HiddifyNext | 6月17日22.4M/S|免费Shadowrocket节点/Clash节点/Trojan节点/SSR节点/Singbox节点/V2ray节点订阅节点">分享HiddifyNext | 6月17日22.4M/S|免费Shadowrocket节点/Clash节点/Trojan节点/SSR节点/Singbox节点/V2ray节点订阅节点</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-6-3-node-share.htm" title="分享HiddifyNext | 6月3日21.8M/S|免费Singbox节点/V2ray节点/SSR节点/Shadowrocket节点/Trojan节点/Clash节点订阅节点">分享HiddifyNext | 6月3日21.8M/S|免费Singbox节点/V2ray节点/SSR节点/Shadowrocket节点/Trojan节点/Clash节点订阅节点</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-7-2-latest-vless-node.htm" title="分享HiddifyNext | 7月2日19.1M/S|免费Shadowrocket节点/Trojan节点/SSR节点/Singbox节点/Clash节点/V2ray节点订阅节点">分享HiddifyNext | 7月2日19.1M/S|免费Shadowrocket节点/Trojan节点/SSR节点/Singbox节点/Clash节点/V2ray节点订阅节点</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-6-27-free-vless-node.htm" title="分享HiddifyNext | 6月27日19.4M/S|免费Clash节点/SSR节点/Shadowrocket节点/V2ray节点/Trojan节点/Singbox节点订阅节点">分享HiddifyNext | 6月27日19.4M/S|免费Clash节点/SSR节点/Shadowrocket节点/V2ray节点/Trojan节点/Singbox节点订阅节点</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-25-free-subscribe-node.htm" title="分享HiddifyNext | 5月25日20.8M/S|免费SSR节点/Shadowrocket节点/Clash节点/Singbox节点/V2ray节点/Trojan节点订阅节点">分享HiddifyNext | 5月25日20.8M/S|免费SSR节点/Shadowrocket节点/Clash节点/Singbox节点/V2ray节点/Trojan节点订阅节点</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-18-vless-node.htm" title="分享HiddifyNext | 5月18日19.4M/S|免费Clash节点/Trojan节点/Shadowrocket节点/Singbox节点/V2ray节点/SSR节点订阅节点">分享HiddifyNext | 5月18日19.4M/S|免费Clash节点/Trojan节点/Shadowrocket节点/Singbox节点/V2ray节点/SSR节点订阅节点</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-3-free-node-subscribe-links.htm" title="分享HiddifyNext | 5月3日21.3M/S|免费Shadowrocket节点/Singbox节点/Trojan节点/V2ray节点/SSR节点/Clash节点订阅节点">分享HiddifyNext | 5月3日21.3M/S|免费Shadowrocket节点/Singbox节点/Trojan节点/V2ray节点/SSR节点/Clash节点订阅节点</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -436,7 +434,10 @@ A：推荐使用 <code data-start="2729" data-end="2751">Autoruns for Windows</c
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">28</span> <a href="/date/2026-06/" title="2026-06 归档">2026-06</a></h4>
+                <h4><span class="badge" style="float: right;">5</span> <a href="/date/2026-07/" title="2026-07 归档">2026-07</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2026-06/" title="2026-06 归档">2026-06</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">29</span> <a href="/date/2026-05/" title="2026-05 归档">2026-05</a></h4>
@@ -467,9 +468,7 @@ A：推荐使用 <code data-start="2729" data-end="2751">Autoruns for Windows</c
                         <a href="/privacy.htm">隐私申明</a> |
                         <a href="/sitemap.xml">网站地图</a>
                     </p>
-                                        <div>特别推荐：<b><a href="javascript:;" class="js_to" data-url="https://www.futizi.net/?code=" data-type="Luniuyun" data-code="svvkQf3y" target="_blank">绿牛云</a></b> <p>高速稳定的网络加速</p>
-                        <p>畅享全球内容，访问 ChatGPT、TikTok、Google 等热门网站。
-全平台支持 · 7×24 专业客服 · 采用军工级安全加密传输技术。</p></div>
+                                        <div>特别推荐：<b><a href="javascript:;" class="js_to" data-url="https://c.kilxs.cn/?path=" data-type="Xingchen" data-code="register&code" target="_blank">星辰机场</a></b> <p>【包年送2个月】</p><p>1、购买入门版年付套餐额外送2个月，共14个月，只要99元！！！</p><p>2、购买“至尊天皇”年付套餐，额外送2个月，只要299元！！！</p><p>3、购买其他包月类套餐中的年付，同样送2个月！！！</p><p>错过要再等一年！！</p></div>
                                         <p>
                         <a href="/">分享HiddifyNext节点订阅中文网</a> 版权所有
                         <br />
